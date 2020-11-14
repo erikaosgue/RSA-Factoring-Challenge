@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+"""Factorize all the things! """
+
+from sys import argv
+
+
+def factorize(filename):
+    """
+    Factorize as many numbers as possible into a
+    product of two smaller numbers """
+
+    with open(filename, 'r+') as f:
+        for number in f:
+            num = int(number)
+
+            if num % 2 == 0:
+                value = num // i
+                print("{}={}*{}".format(num, int(value), i))
+                return
+            for i in range(3, 100, 2):
+                value = num // i
+                print("{}={}*{}".format(num, int(value), i))
+                return
+
+
+if __name__ == "__main__":
+    factorize(argv[1])
