@@ -14,13 +14,17 @@ def factorize(filename):
             num = int(number)
 
             if num % 2 == 0:
-                value = num // i
-                print("{}={}*{}".format(num, int(value), i))
-                return
-            for i in range(3, 100, 2):
-                value = num // i
-                print("{}={}*{}".format(num, int(value), i))
-                return
+                value = num // 2
+                print("{}={}*{}".format(num, int(value), 2))
+                continue
+            else:
+                i = 3
+                while (num >= i):
+                    if num % i == 0:
+                        value = num // i
+                        print("{}={}*{}".format(num, int(value), i))
+                        break
+                    i += 2
 
 
 if __name__ == "__main__":
